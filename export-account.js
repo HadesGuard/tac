@@ -16,7 +16,7 @@ bip39.mnemonicToSeed(mnemonic).then((seed) => {
   const addressWriteStream = fs.createWriteStream('addresses.txt');
 
   // Generate 100 wallets
-  for (let i = 0; i < 100000; i++) {
+  for (let i = 0; i < 10000; i++) {
     // Derive the account using the standard Ethereum path (m/44'/60'/0'/0/i)
     const addrNode = root.derive(`m/44'/60'/0'/0/${i}`);
 
